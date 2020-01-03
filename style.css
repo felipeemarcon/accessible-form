@@ -26,9 +26,9 @@ body {
   justify-content: center;
 }
 
-input {
+/* input {
   -webkit-appearance: none;
-}
+} */
 
 #app {
   width: 100%;
