@@ -1,0 +1,18 @@
+{
+  "name": "accessible-form",
+  "version": "1.0.0",
+  "description": "Project for development a accessible form and test with users.",
+  "main": "server.js",
+  "repository": "https://github.com/felipeemarcon/accessible-form",
+  "author": "Felipe Marcon",
+  "license": "'",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
