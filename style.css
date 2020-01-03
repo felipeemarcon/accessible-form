@@ -26,9 +26,16 @@ body {
   justify-content: center;
 }
 
-/* input {
+input,
+select,
+button {
+  /* -webkit-appearance: none; */
+  background: transparent;
+  box-shadow: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
-} */
+  appearance: none;
+}
 
 #app {
   width: 100%;
@@ -112,7 +119,26 @@ fieldset legend {
 
 #form .div-select {
   width: 100%;
-  padding: 0 8px;
+  padding: 0 9px;
+  position: relative;
+  cursor: pointer;
+}
+
+#form .div-select::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%) rotate(0);
+  transform-origin: center center;
+  background-image: url("./images/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: 98% center;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.24s ease-in-out;
 }
 
 #form .div-select select {
@@ -120,7 +146,7 @@ fieldset legend {
   height: 54px;
   border: none;
   font-size: 16px;
-  background: transparent;
+  cursor: pointer;
 }
 
 #form input[type="date"],
@@ -144,6 +170,16 @@ fieldset legend {
 #form input:hover,
 #form .div-select:hover {
   box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.32);
+}
+
+#form .div-select:hover::before {
+  transform: translateY(-20%) rotate(0deg);
+  transform-origin: center center;
+}
+
+#form .div-select:focus-within::before {
+  transform: translateY(-50%) rotate(180deg);
+  transform-origin: center center;
 }
 
 #form input:focus,
