@@ -26,6 +26,10 @@ body {
   justify-content: center;
 }
 
+input {
+  -webkit-appearance: none;
+}
+
 #app {
   width: 100%;
   max-width: 490px;
