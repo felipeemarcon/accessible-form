@@ -26,15 +26,23 @@ body {
   justify-content: center;
 }
 
+::-moz-selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+::selection {
+  background: var(--primary-color);
+  color: #fff;
+}
+
 input,
 select,
 button {
-  /* -webkit-appearance: none; */
   background: transparent;
   box-shadow: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
+  font-family: var(--font-family);
 }
 
 #app {
