@@ -27,18 +27,19 @@
           <legend>Dados pessoais:</legend>
           <div class="input-conteudo">
             <label for="nome"><p>Nome completo:</p>
-              <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+              <input type="text" id="nome" name="nome" required="required" aria-required="true" placeholder="Digite seu nome completo" aria-label="Digite seu nome completo">
             </label>
           </div>
           <div class="input-conteudo">
-            <label for="nascimento"><p>Data de nascimento:</p>
-              <input type="date" id="nascimento" name="nascimento" value="2020-01-03" min="1900-01-01" max="2008-01-01" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}">
+            <label id="birthLabel" for="nascimento"><p>Data de nascimento (<span class="input-instruction" id="birthDesc" tabindex="-1">DD/MM/AAAA</span>): </p>
+              <input type="date" id="nascimento" name="nascimento" value="2020-01-03" min="1900-01-01" max="2008-01-01" required="required" aria-required="true" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" aria-labelledby="birthLabel" aria-describedby="birthDesc" aria-label="Preencha com a sua data de nascimento">
+
             </label>
           </div>
           <div class="input-conteudo">
             <label for="genero"><p>Gênero:</p>
               <div class="div-select">
-                <select name="genero" id="selecionar-genero" required>
+                <select name="genero" id="selecionar-genero" required="required" aria-required="true">
                   <option value="">Selecione um gênero</option>
                   <option value="male">Masculino</option>
                   <option value="female">Feminino</option>
@@ -52,17 +53,17 @@
           <legend>Dados de cadastro</legend>
           <div class="input-conteudo">
             <label for="email"><p>E-mail:</p>
-              <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+              <input type="email" id="email" name="email" required="required" aria-required="true" placeholder="Digite seu e-mail">
             </label>
           </div>
           <div class="input-conteudo">
             <label for="senha"><p>Senha:</p>
-              <input type="password" id="senha" name="senha" required placeholder="Digite uma senha">
+              <input type="password" id="senha" name="senha" required="required" aria-required="true" placeholder="Digite uma senha">
             </label>
           </div>
           <div class="input-conteudo">
             <label for="senha-confirma"><p>Confirmação de senha:</p>
-              <input type="password" id="senha-confirma" required name="senha-confirma" placeholder="Digite a senha novamente">
+              <input type="password" id="senha-confirma" required="required" aria-required="true" name="senha-confirma" placeholder="Digite a senha novamente">
             </label>
           </div>
         </fieldset>

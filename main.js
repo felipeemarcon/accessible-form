@@ -8,3 +8,14 @@ form.addEventListener("submit", event => {
     btnReset.click();
   }, 2000);
 });
+
+function focusFirstField() {
+  window.scrollTo({
+    top: 0,
+    left: 0
+  });
+
+  form.children[0].querySelector("input").focus();
+}
+
+btnReset.addEventListener("click", () => focusFirstField());

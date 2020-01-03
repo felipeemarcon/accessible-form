@@ -43,6 +43,7 @@ button {
   -moz-appearance: none;
   -webkit-appearance: none;
   font-family: var(--font-family);
+  font-weight: 500;
 }
 
 #app {
@@ -106,6 +107,12 @@ fieldset legend {
   margin-bottom: 6px;
 }
 
+.input-instruction {
+  color: var(--secondary-color);
+  display: inline-block;
+  margin-top: 4px;
+}
+
 #form label {
   font-weight: 500;
   font-size: 16px;
@@ -119,7 +126,6 @@ fieldset legend {
   border-radius: 2px;
   padding: 14px 12px;
   width: 100%;
-  font-weight: 500;
   font-size: 16px;
   color: var(--secondary-color);
   transition: 0.24s ease-in-out;
