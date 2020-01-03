@@ -112,7 +112,7 @@ fieldset legend {
 
 #form .div-select {
   width: 100%;
-  padding: 0;
+  padding: 0 8px;
 }
 
 #form .div-select select {
