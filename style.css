@@ -5,6 +5,9 @@
   --light-color: #638bb3;
   --dark-color: #252a2a;
   --gray-color: #a8a8a8;
+  --danger-color: #ec3b3b;
+  --danger-light-color: #ffebeb;
+  --success-color: #35b862;
 
   --font-family: "Barlow", "Helvetica", "Arial", sans-serif;
 }
@@ -69,7 +72,7 @@ button {
   color: var(--secondary-color);
 }
 
-#form {
+.app-form {
   margin-top: 48px;
 }
 
@@ -94,16 +97,16 @@ fieldset legend {
   margin-bottom: 18px;
 }
 
-.input-conteudo {
+.app-form__inputContent {
   display: flex;
   flex-direction: column;
 }
 
-.input-conteudo:not(:first-child) {
+.app-form__inputContent:not(:first-child) {
   margin: 14px 0;
 }
 
-.input-conteudo > label p {
+.app-form__inputContent > label p {
   margin-bottom: 6px;
 }
 
@@ -113,14 +116,15 @@ fieldset legend {
   margin-top: 4px;
 }
 
-#form label {
+.app-form label {
   font-weight: 500;
   font-size: 16px;
   color: var(--primary-color);
+  position: relative;
 }
 
-#form input,
-#form .div-select {
+.app-form input,
+.app-form .div-select {
   background: #ffffff;
   border: 1px solid var(--light-color);
   border-radius: 2px;
@@ -131,14 +135,14 @@ fieldset legend {
   transition: 0.24s ease-in-out;
 }
 
-#form .div-select {
+.app-form .div-select {
   width: 100%;
   padding: 0 9px;
   position: relative;
   cursor: pointer;
 }
 
-#form .div-select::before {
+.app-form .div-select::before {
   content: "";
   position: absolute;
   width: 18px;
@@ -155,7 +159,7 @@ fieldset legend {
   transition: 0.24s ease-in-out;
 }
 
-#form .div-select select {
+.app-form .div-select select {
   width: 100%;
   height: 54px;
   border: none;
@@ -163,42 +167,75 @@ fieldset legend {
   cursor: pointer;
 }
 
-#form input[type="date"],
-#form .div-select select {
+.app-form input[type="date"],
+.app-form .div-select select {
   font-family: var(--font-family);
   color: var(--secondary-color);
 }
 
-#form input::placeholder {
+.app-form input::placeholder {
   color: var(--light-color);
 }
 
-#form input:hover,
-#form input:focus,
-#form .div-select select:hover,
-#form .div-select select:focus {
+.app-form input:hover,
+.app-form input:focus,
+.app-form .div-select select:hover,
+.app-form .div-select select:focus {
   border-color: var(--secondary-color);
   outline: thin;
 }
 
-#form input:hover,
-#form .div-select:hover {
+.app-form input:hover,
+.app-form .div-select:hover {
   box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.32);
 }
 
-#form .div-select:hover::before {
+.app-form .div-select:hover::before {
   transform: translateY(-20%) rotate(0deg);
   transform-origin: center center;
 }
 
-#form .div-select:focus-within::before {
+.app-form .div-select:focus-within::before {
   transform: translateY(-50%) rotate(180deg);
   transform-origin: center center;
 }
 
-#form input:focus,
-#form .div-select:focus-within {
+.app-form input:focus,
+.app-form .div-select:focus-within {
   box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.42);
+}
+
+.app-form__inputContent--error input {
+  background-color: var(--danger-light-color);
+  border-color: var(--danger-color);
+  box-shadow: 0 0 0 2px rgba(360, 82, 58, 0.32);
+}
+
+.app-form__inputContent--error input:focus {
+  border-color: var(--danger-color);
+}
+
+.app-form__inputContent--success input {
+  border-color: var(--success-color);
+  box-shadow: 0 0 0 2px rgba(53, 184, 98, 0.32);
+}
+
+.app-form__inputContent--success input:focus {
+  border-color: var(--success-color);
+}
+
+.app-form__inputFdb {
+  position: absolute;
+  right: 12px;
+  top: 40px;
+}
+
+.app-form__inputFdb--error i {
+  color: var(--danger-color);
+}
+
+.app-form__inputFdb--success i {
+  color: var(--success-color);
 }
 
 .btns-content {
