@@ -217,7 +217,6 @@ fieldset legend {
 
 .app-form__inputContent--success input {
   border-color: var(--success-color);
-  box-shadow: 0 0 0 2px rgba(53, 184, 98, 0.32);
 }
 
 .app-form__inputContent--success input:focus {
