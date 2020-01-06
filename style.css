@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #1e90ff;
+  --primary-color: #0073E3;
   --secondary-color: #2b4acb;
   --third-color: #1f3a93;
   --light-color: #638bb3;
@@ -100,27 +100,35 @@ fieldset legend {
 .app-form__inputContent {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .app-form__inputContent:not(:first-child) {
   margin: 14px 0;
 }
 
-.app-form__inputContent > label p {
+.app-form__inputContent label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 6px;
 }
 
-.input-instruction {
+.app-form__inputInstruction {
   color: var(--secondary-color);
   display: inline-block;
   margin-top: 4px;
 }
 
-.app-form label {
+.app-form__inputContent label {
   font-weight: 500;
   font-size: 16px;
   color: var(--primary-color);
   position: relative;
+}
+
+.app-form__inputFdbLabel--error {
+  color: var(--danger-color);
 }
 
 .app-form input,
@@ -223,17 +231,17 @@ fieldset legend {
   border-color: var(--success-color);
 }
 
-.app-form__inputFdb {
+.app-form__inputFdbIcon {
   position: absolute;
   right: 12px;
   top: 40px;
 }
 
-.app-form__inputFdb--error i {
+.app-form__inputFdbIcon--error i {
   color: var(--danger-color);
 }
 
-.app-form__inputFdb--success i {
+.app-form__inputFdbIcon--success i {
   color: var(--success-color);
 }
 
@@ -268,19 +276,19 @@ fieldset legend {
   margin: 8px 0;
 }
 
-.btn-primary {
+.btn--primary {
   background-color: var(--secondary-color);
 }
 
-.btn-secondary {
+.btn--secondary {
   color: var(--light-color);
   font-size: 16px;
   font-weight: 600;
   text-decoration: underline;
 }
 
-.btn:hover:not(.btn-secondary),
-.btn:focus:not(.btn-secondary) {
+.btn:hover:not(.btn--secondary),
+.btn:focus:not(.btn--secondary) {
   background-color: var(--third-color);
 }
 
@@ -288,7 +296,7 @@ fieldset legend {
   box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.42);
 }
 
-.btn-secondary:hover {
+.btn--secondary:hover {
   color: var(--primary-color);
 }
 

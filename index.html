@@ -27,55 +27,56 @@
         <fieldset>
           <legend>Dados pessoais:</legend>
           <div class="app-form__inputContent">
-            <label for="nome"><p>Nome completo:</p>
-              <input type="text" id="nome" name="nome" required="required" aria-required="true" placeholder="Digite seu nome completo" aria-label="Digite seu nome completo">
-            </label>
+            <label for="nome"><p>Nome completo:</p></label>
+            <input type="text" id="nome" name="nome" required="required" aria-required="true" placeholder="Digite seu nome completo" aria-label="Digite seu nome completo">
           </div>
           <div class="app-form__inputContent">
-            <label id="birthLabel" for="nascimento"><p>Data de nascimento (<span class="input-instruction" id="birthDesc" tabindex="-1">DD/MM/AAAA</span>): </p>
-              <input type="date" id="nascimento" name="nascimento" value="2020-01-03" min="1900-01-01" max="2008-01-01" required="required" aria-required="true" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" aria-labelledby="birthLabel" aria-describedby="birthDesc" aria-label="Preencha com a sua data de nascimento">
+            <label id="birthLabel" for="nascimento">
+              <p>Data de nascimento (<span class="app-form__inputInstruction" id="birthDesc" tabindex="-1">DD/MM/AAAA</span>):</p>
             </label>
+            <input type="date" id="nascimento" name="nascimento" value="2020-01-03" min="1900-01-01" max="2008-01-01" required="required" aria-required="true" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" aria-labelledby="birthLabel" aria-describedby="birthDesc" aria-label="Preencha com a sua data de nascimento">
           </div>
           <div class="app-form__inputContent">
-            <label for="genero"><p>Gênero:</p>
-              <div class="div-select">
-                <select name="genero" id="selecionar-genero" required="required" aria-required="true">
-                  <option value="">Selecione um gênero</option>
-                  <option value="male">Masculino</option>
-                  <option value="female">Feminino</option>
-                  <option value="other">Outro</option>
-                </select>
-              </div>
-            </label>
+            <label for="genero"><p>Gênero:</p></label>
+            <div class="div-select">
+              <select name="genero" id="selecionar-genero" required="required" aria-required="true">
+                <option value="">Selecione um gênero</option>
+                <option value="male">Masculino</option>
+                <option value="female">Feminino</option>
+                <option value="other">Outro</option>
+              </select>
+            </div>
           </div>
         </fieldset>
         <fieldset>
-          <legend>Dados de cadastro</legend>
+          <legend>Dados de cadastro:</legend>
           <div class="app-form__inputContent app-form__inputContent--error">
-            <label for="email"><p>E-mail:</p>
-              <div class="app-form__inputFdb app-form__inputFdb--error">
-                <i class="fas fa-times-circle"></i>
+            <label for="email">
+              <p>E-mail:</p>
+              <div class="app-form__inputFdbLabel app-form__inputFdbLabel--error">
+                Revise o campo abaixo.
               </div>
-              <input type="email" id="email" name="email" required="required" aria-required="true" placeholder="Digite seu e-mail">
             </label>
+            <div class="app-form__inputFdbIcon app-form__inputFdbIcon--error">
+              <i class="fas fa-times-circle"></i>
+            </div>
+            <input type="email" id="email" name="email" required="required" aria-required="true" placeholder="Digite seu e-mail">
           </div>
           <div class="app-form__inputContent app-form__inputContent--success">
-            <label for="senha"><p>Senha:</p>
-              <div class="app-form__inputFdb app-form__inputFdb--success">
-                <i class="fas fa-check-circle"></i>
-              </div>
-              <input type="password" id="senha" name="senha" required="required" aria-required="true" placeholder="Digite uma senha">
-            </label>
+            <label for="senha"><p>Senha:</p></label>
+            <div class="app-form__inputFdbIcon app-form__inputFdbIcon--success">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <input type="password" id="senha" name="senha" required="required" aria-required="true" placeholder="Digite uma senha">
           </div>
           <div class="app-form__inputContent">
-            <label for="senha-confirma"><p>Confirmação de senha:</p>
-              <input type="password" id="senha-confirma" required="required" aria-required="true" name="senha-confirma" placeholder="Digite a senha novamente">
-            </label>
+            <label for="senha-confirma"><p>Confirmação de senha:</p></label>
+            <input type="password" id="senha-confirma" required="required" aria-required="true" name="senha-confirma" placeholder="Digite a senha novamente">
           </div>
         </fieldset>
         <div class="btns-content">
-          <button type="submit" role="button" aria-labelledby="Cadastrar" class="btn btn-primary">Cadastrar</button>
-          <button type="reset" id="reset-form" role="button" aria-labelledby="Limpar formulário" class="btn btn-secondary">Limpar formulário</button>
+          <button type="submit" role="button" aria-labelledby="Cadastrar" class="btn btn--primary" title="Efetuar o cadastro">Cadastrar</button>
+          <button type="reset" id="reset-form" role="button" aria-labelledby="Limpar formulário" class="btn btn--secondary" title="Limpar formulário">Limpar formulário</button>
         </div>
       </form>
       <div class="app-disclaimer">
