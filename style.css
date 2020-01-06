@@ -5,7 +5,7 @@
   --light-color: #638bb3;
   --dark-color: #252a2a;
   --gray-color: #a8a8a8;
-  --danger-color: #ec3b3b;
+  --danger-color: #DD1616;
   --danger-light-color: #ffebeb;
   --success-color: #35b862;
 
@@ -216,7 +216,6 @@ fieldset legend {
 .app-form__inputContent--error input {
   background-color: var(--danger-light-color);
   border-color: var(--danger-color);
-  box-shadow: 0 0 0 2px rgba(360, 82, 58, 0.32);
 }
 
 .app-form__inputContent--error input:focus {
